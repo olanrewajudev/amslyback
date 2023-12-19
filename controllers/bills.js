@@ -1617,7 +1617,7 @@ exports.ElectricityBill = async (req, res) => {
       where: { id: serviceType },
       include: [{ model: Subscriptiondata, as: 'packs' }]
     })
-    if (!levelPack) return res.json({ status: 400, msg: 'Package NotFound' });
+    if (!levelpack) return res.json({ status: 400, msg: 'Package Not Found' });
     const pack = levelpack.packs
 
     // check if transaction pin matches
